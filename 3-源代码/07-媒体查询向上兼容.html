@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    .col {
+        height: 100px;
+        border: 1px solid yellowgreen;
+        font-size: 30px;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+        width: 100%;
+    }
+    /*当多个屏幕样式一致的时候写最小的那个的屏幕的媒体查询  向上兼容*/
+    @media(min-width: 992px) {
+        .col {
+            width: 33.33%;
+        }
+    }
+    
+ /*   @media(min-width: 1200px) {
+        .col {
+            width: 33.33%;
+        }
+    }*/
+    </style>
+</head>
+
+<body>
+    <!-- 需要多个屏幕的样式一致的时候 -->
+    <!-- 大屏幕和中屏幕都分3列  可以同时写大和中都写3列的样式 也可以只给中屏幕写 让向上兼容 -->
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+    </div>
+</body>
+
+</html>

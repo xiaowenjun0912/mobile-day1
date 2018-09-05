@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+    .container {
+        height: 100px;
+        /*background-color: yellowgreen;*/
+    }
+    
+    .row div {
+        height: 100px;
+        border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">3</div>
+            <div class="col-xs-1">4</div>
+            <!-- 把当前的列定位到哪个地方 -->
+            <!-- 往右推 定位 left值-->
+            <div class="col-xs-1 col-xs-push-1">5</div>
+            <!-- 往左拉 定位 right值-->
+            <div class="col-xs-1 col-xs-pull-1">6</div>
+            <div class="col-xs-1">7</div>
+            <div class="col-xs-1">8</div>
+            <div class="col-xs-1">9</div>
+            <div class="col-xs-1">10</div>
+            <div class="col-xs-1">11</div>
+            <div class="col-xs-1">12</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<style>
+		.container{
+			height: 100px;
+			/*background-color: yellowgreen;*/
+		}
+		.row div{
+			height: 100px;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<!-- 栅格系统 分为行和列 类似表格的tr和td
+		栅格系统 分为行和列 类似表格的tr和td
+		栅格系统的行 .row 表示
+
+	栅格系统的行 .row表示
+	列用 .col-xx-xx 表示  col-档次-列数
+	行必须放到容器里面 列必须放到行里面   tr必须放到table td必须放tr
+	容器自带了15px的padding -->
+	<div class="container">
+		<!-- row自带了15px 左右margin弥补了父元素的padding 内容父元素  -->
+		<!-- row自带了15px 左右-margin弥补父元素的padding 内容父元素有1170 行也有1170 
+		但不是每个row都要包一个容器-->
+		<div class="row">
+			<!-- 大屏幕生效的样式 占1列 -->
+			<!-- 栅格系统的列 分4种档次
+			col-lg 大屏幕
+			col-md 中屏幕
+			col-sm 小屏幕
+			col-xs 超小屏幕
+			  列数一行最多分为12    列数一行最多分为12    列数一行最多分为12   列数一行最多分为12
+			  
+			  列数可以等比例划分也可以自由划分一行拼到12列就行 如果超过就会换行
+
+			  通常网页布局列数划分
+
+			列数可以等比例划分也可以自由划分一行拼到12列就行 如果超过就会换行 -->
+			<!-- 通常网页布局列数划分
+			一行等比例分为4列 col-lg-3    12/4 == 3
+			一行等比例分为3列 col-lg-4    12/3 == 4
+			一行等比例分为2列 col-lg-6    12/2 == 6
+			一行等比例分为1列 col-lg-12    12/1 == 12  省略不写
+			但是不能等比例分为5 7 这种 列数没有小数 -->
+			<!-- <div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div>
+			<div class="col-lg-1">大屏幕的1列</div> -->
+		</div>
+	</div>
+
+	<!-- 栅格的档次 在对应的屏幕生效 也会有向上兼容和向下覆盖的特性 -->
+	<div class="container">
+		<div class="row">
+			<!-- <div class="col-lg-3">lg是3列</div>
+			<div class="col-md-4">md占4列</div>
+			<div class="col-sm-6">sm占6列</div>
+			<div class="col-xs-12">xs占12列</div> -->
+			<!-- 可以在一个列写多个列的类名 在不同屏幕生效对应的列的样式 -->
+<!-- 			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">动态变化</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">动态变化</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">动态变化</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">动态变化</div> -->
+
+			<!-- xs有点特殊 如果没有写别的档次的类名 xs会在所有屏幕都生效 -->
+		<!-- 	<div class="col-xs-6">1</div>
+			<div class="col-xs-6">2</div> -->
+			<!-- 当多个档次宽度一致的时候写最小的档次的类名 -->
+			<!-- 当多个类名一致就写最小的档次的类名 -->
+			<!-- 当多个类名一致就写最小的档次的类名 -->
+			<!-- 当多个类名一致就写最小档次的类名 -->
+			<!-- col-lg 新电脑1200以上 -->
+			<!-- col-md- 旧电脑 -->
+			<!-- col-sm ipad-->
+			<!-- col-xs -->
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">1</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">2</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">3</div>
+		
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- meta:vp -->
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+    .container {
+        height: 100px;
+        /*background-color: yellowgreen;*/
+    }
+    
+    .row div {
+        height: 100px;
+        border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+            	<!-- 栅格的列宽度都是百分比 参照是父元素的内容的宽度 -->
+            	<div class="row">
+            		<div class="col-xs-6">1</div>
+            		<div class="col-xs-6">2</div>
+            	</div>
+            </div>
+            <div class="col-xs-6"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <!-- 栅格的列宽度都是百分比 参照的是父元素的内容的宽度 -->
+                <div class="row">
+                    <div class="col-xs-6">1</div>
+                    <div class="col-xs-6">2</div>
+                </div>
+            </div>
+            <div class="col-xs-6"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

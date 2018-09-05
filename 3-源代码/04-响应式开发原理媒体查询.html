@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    .col {
+        height: 100px;
+        border: 1px solid yellowgreen;
+        font-size: 30px;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+        width: 100%;
+    }
+    /* 媒体查询: 查询当前媒体设备的宽高 来生成对应的样式*/ 
+    /*媒体查询 ： 查询当前媒体设备的宽度高度 来生效对应的样式*/
+    /*  @media screen and (条件){
+   		screen and表示判断当前屏幕 （可以省略不写 但是如果不省略 and前后必须有空格）
+   }
+   @media (条件){
+       
+   	
+   } 
+   @media(条件){
+
+       }
+	if(条件){
+	
+	}
+   */
+    /* 条件： 分为3种条件	
+			min-width:1200px  屏幕宽度大于等于某个值生效
+			max-width:1200px  屏幕宽度小于等于某个值生效
+			width:1200px 屏幕宽度等于某个值生效 */
+    /*屏幕宽度变化会自动判断*/
+    /* 条件写法顺序  当使用min-width作为条件判断的时候 因为大屏幕会同时满足多个条件 应该生效最大的样式 把最大的样式的代码写在后面  条件要从小到大写  让大屏幕的样式把小屏幕样式覆盖 （向下覆盖） */
+    
+    @media(max-width: 768px) {
+        /*超小屏幕 100%*/
+        .col {
+            width: 100%;
+        }
+    }
+    
+    @media(min-width: 768px) {
+        /*小屏幕 宽度50%*/
+        .col {
+            width: 50%;
+        }
+    }
+    
+    @media(min-width: 992px) {
+        /*中屏幕 宽度33.33%*/
+        .col {
+            width: 33.33%;
+        }
+    }
+    
+    @media(min-width: 1200px) {
+        /*大屏幕 宽度25%*/
+        .col {
+            width: 25%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 响应式开发： 一个页面适配多个终端 在不同终端展示不同的网页布局 -->
+    <!-- 一行在PC端 1行 分为4列  在旧电脑端（大头电脑机房电脑） 分3列 在ipad端分为2列  在手机端分为1列 -->
+    <!-- 屏幕的宽度范围区间 业界有一个屏幕区间范围规范
+	大屏幕 大桌面显示器 笔记本电脑pc端 (≥1200px)  大于1200
+	中等屏幕 桌面显示器 大头电脑 (≥992px)  992到1200之间
+	小屏幕 平板ipad (≥768px)  768-992之间
+	超小屏幕 手机iphone 小米手机 (<768px)  小于768 -->
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+    </div>
+</body>
+
+</html>
